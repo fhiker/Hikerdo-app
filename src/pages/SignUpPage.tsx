@@ -25,7 +25,7 @@ const SignUpPage = () => {
                 <div className="flex flex-wrap items-center">
                     <div className="hidden w-full xl:block xl:w-1/2">
                         <div className="px-8 text-center">
-                            <img className='dark:hidden' src='/logo.svg' alt='logo' />
+                            <img className='dark:hidden' src='/Logo1.png' alt='logo' />
                             <img className='hidden dark:block' src='/Logo7.png' alt='logo' />
                         </div>
                     </div>
