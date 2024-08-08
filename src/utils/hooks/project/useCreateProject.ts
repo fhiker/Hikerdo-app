@@ -68,7 +68,7 @@ export const useCreateProject = () => {
       toast.success(t('project created successfully'));
     },
 
-    onError: (error, newProject, context) => {
+    onError: (_error, newProject, context) => {
       // Rollback to the previous state
       if (context?.previousProjects) {
         queryClient.setQueryData<ProjectsQueryData>([`projects-${newProject.teamId}`], context.previousProjects);
@@ -76,7 +76,7 @@ export const useCreateProject = () => {
       toast.error(t('error creating project'));
     },
 
-    onSettled: (data, error, variables) => {
+    onSettled: (_data, _error, variables) => {
       // Refetch to ensure our local data is in sync with the server
       queryClient.invalidateQueries({
         queryKey: [`projects-${variables.teamId}`],

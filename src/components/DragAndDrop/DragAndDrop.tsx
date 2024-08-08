@@ -84,7 +84,7 @@ const TaskManagement = () => {
     }
 
     const onDragEnd = useCallback((result: DragUpdate) => {
-        const { source, destination, type, draggableId } = result;
+        const { destination, type, draggableId } = result;
 
         if (!destination) return;
 
@@ -233,7 +233,7 @@ const TaskManagement = () => {
                             ))}
                             {provided.placeholder}
                             <StrictModeDroppable droppableId="add-column" type="TASK">
-                                {(provided, snapshot) => (
+                                {(provided) => (
                                     <div
                                         ref={provided.innerRef}
                                         {...provided.droppableProps}

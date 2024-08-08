@@ -37,7 +37,7 @@ export const useDeleteTask = () => {
       queryClient.invalidateQueries({ queryKey: [`tasks-${teamId}`] });
     },
 
-    onError: (error, { task, teamId }, context) => {
+    onError: (_error, { task, teamId }, context) => {
       toast.error(`${t('error deleting task')} ${task.attributes.title}`);
       if (context?.previousTasks) {
         queryClient.setQueryData<{ data: { data: TaskInterface[] } }>([`tasks-${teamId}`], (old) => ({

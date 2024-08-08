@@ -1,5 +1,4 @@
 import * as zod from 'zod';
-import { ZodSchema } from 'zod';
 
 export const CreateTaskSchema = zod.object({
   title: zod.string().min(3),

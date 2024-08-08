@@ -5,7 +5,6 @@ import type { z } from "zod";
 import { useCreateTask } from "@/utils/hooks/task/useCreateTask";
 import { createModalContext } from "@/contexts/modalOpenContext";
 import { currentTaskListContextId } from "@/contexts/currentTaskListIdContext";
-import { useParams } from "react-router-dom";
 import { currentTeamIdContext } from "@/contexts/currentTeamIdContext";
 import { useTranslation } from "react-i18next";
 

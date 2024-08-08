@@ -59,7 +59,7 @@ export const useCreateTeam = () => {
       toast.success(t('team created successfully'));
     },
 
-    onError: (error, newTeam, context) => {
+    onError: (_error, _newTeam, context) => {
       if (context?.previousTeams) {
         queryClient.setQueryData(['teams'], context.previousTeams);
       }

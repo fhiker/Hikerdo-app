@@ -1,11 +1,11 @@
 import PublicLayout from '@/layouts/PublicLayout';
 import { useAuth } from '@/utils/hooks/useAuth';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const SignInPage = () => {
-    const [formErrors, setFormErrors] = useState({ title: '', password: '' })
+    // const [formErrors, setFormErrors] = useState({ title: '', password: '' })
     const { getAuthUrl, data, status } = useAuth();
     const { t } = useTranslation()
 

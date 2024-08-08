@@ -55,7 +55,7 @@ export const useUpdateTeam = () => {
       toast.success(t('team updated successfully'));
     },
 
-    onError: (err, newTeam, context) => {
+    onError: (err, _newTeam, context) => {
       if (context?.previousTeams) {
         queryClient.setQueryData<TeamsQueryData>(['teams'], context.previousTeams);
       }

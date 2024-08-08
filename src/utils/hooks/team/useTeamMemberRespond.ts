@@ -18,7 +18,7 @@ export const useTeamMemberRespond = () => {
       queryClient.invalidateQueries({ queryKey: ['teams'] });
     },
 
-    onError: (err, user, context) => {
+    onError: (_err, _user, _context) => {
       toast.error(t('error inviting user'));
     },
   });

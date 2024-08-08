@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 const TeamPage = () => {
     const { teamData, teamsStatus } = useTeam()
-    const [titleError, setTitleError] = useState<string | undefined>(undefined)
+    // const [titleError] = useState<string | undefined>(undefined)
     const [createMode, setCreateMode] = useState<boolean>(false)
     const { t } = useTranslation()
 
@@ -28,7 +28,7 @@ const TeamPage = () => {
                         </div>
                         <div className='-top-4 sm:relative md:block text-xl font-bold'>
                             {createMode && <CreateTeam setCreateMode={setCreateMode} />}
-                            {titleError && <span>{titleError}</span>}
+                            {/* {titleError && <span>{titleError}</span>} */}
                             <button type='button' onClick={() => setCreateMode(!createMode)} className='btn btn-transparent rounded-full text-primary hover:text-white dark:hover:text-black hover:btn-primary text-lg'>
                                 +
                             </button>

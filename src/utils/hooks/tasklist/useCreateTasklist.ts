@@ -68,7 +68,7 @@ export const useCreateTaskList = () => {
       queryClient.invalidateQueries({ queryKey: [`task-list-${newTasklist.projectId}`] });
     },
 
-    onError: (error, newTasklist, context) => {
+    onError: (_error, newTasklist, context) => {
       toast.error(t('error creating tasklist'));
 
       if (context?.previousTasklists) {

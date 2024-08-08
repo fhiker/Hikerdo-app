@@ -36,11 +36,11 @@ export const useDeleteTeam = () => {
       return { previousTeams };
     },
 
-    onSuccess: (_, teamId) => {
+    onSuccess: (_, _teamId) => {
       toast.success(t('team deleted successfully'));
     },
 
-    onError: (error, teamId, context) => {
+    onError: (_error, teamId, context) => {
       if (context?.previousTeams) {
         queryClient.setQueryData(['teams'], context.previousTeams);
       }

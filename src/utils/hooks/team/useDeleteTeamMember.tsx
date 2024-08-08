@@ -43,7 +43,7 @@ export const useDeleteTeamMember = () => {
             }
         },
 
-        onError: (error, data, context) => {
+        onError: (_error, data, context) => {
             if (context?.previousTeams) {
                 queryClient.setQueryData([`team-members-${data.teamId}`], context.previousTeams);
             }

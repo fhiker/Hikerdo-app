@@ -68,7 +68,7 @@ export const useCreateTask = () => {
       toast.success(t('task created successfully'));
     },
 
-    onError: (error, newTask, context) => {
+    onError: (_error, newTask, context) => {
       if (context?.previousTasks) {
         queryClient.setQueryData([`tasks-${newTask.teamId}`], context.previousTasks);
       }

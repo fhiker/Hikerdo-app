@@ -8,7 +8,6 @@ import { UpdateTaskSchema } from '@/components/Task/schemas'
 import { DateInput } from './DateInput'
 import { useDeleteTask } from '@/utils/hooks/task/useDeleteTask'
 import { useUpdateTask } from '@/utils/hooks/task/useUpdateTask'
-import { useTasks } from '@/utils/hooks/task/useTasks'
 import validate from '@/utils/functions/validate'
 import { useTeamMembers } from '@/utils/hooks/team/useTeamMembers'
 
@@ -176,11 +175,6 @@ const EditTask: React.FC = () => {
           </div>
         </form>
       </div>
-
-      {/* TODO: One Day */}
-      {/* <div className='fixed bottom-0 left-0 px-8 pb-4 w-full'>
-        <textarea placeholder="Write a comment..." className="textarea textarea-bordered w-full" />
-      </div> */}
     </div>
   )
 }

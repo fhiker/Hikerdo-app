@@ -17,7 +17,7 @@ export const useInviteTeamMember = () => {
       toast.success(t('user invited successfully'));
     },
 
-    onError: (err, user, context) => {
+    onError: (_err, _user, _context) => {
       toast.error(t('error inviting user'));
     },
 

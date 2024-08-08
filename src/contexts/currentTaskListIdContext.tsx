@@ -1,4 +1,3 @@
-import { TaskListInterface } from "@/types/entities"
 import { createContext } from "react"
 
 type contextType = {

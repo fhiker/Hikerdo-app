@@ -58,7 +58,7 @@ export const useUpdateProject = () => {
       return { previousProjects };
     },
 
-    onError: (error, newProject, context) => {
+    onError: (_error, newProject, context) => {
       // If the mutation fails, use the context returned from onMutate to roll back
       if (context?.previousProjects) {
         queryClient.setQueryData<ProjectsQueryData>([`projects-${newProject.teamId}`], context.previousProjects);
@@ -66,7 +66,7 @@ export const useUpdateProject = () => {
       toast.error(t('error updating project'));
     },
 
-    onSuccess: (response, variables) => {
+    onSuccess: (_response, variables) => {
       toast.success(t('project updated successfully'));
 
       // Invalidate and refetch

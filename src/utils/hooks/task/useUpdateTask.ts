@@ -73,12 +73,12 @@ export const useUpdateTask = () => {
 
       return { previousTasks };
     },
-    onSuccess: (_, { task, teamId }) => {
+    onSuccess: (_, { teamId }) => {
       queryClient.invalidateQueries({ queryKey: [`tasks-${teamId}`] });
       toast.success(t('task updated successfully'));
     },
 
-    onError: (error, variables, context) => {
+    onError: (_error, _variables, context) => {
       if (context?.previousTasks) {
         queryClient.setQueryData(
           [`tasks-${context.previousTasks.data.data[0].attributes.teamId}`],
