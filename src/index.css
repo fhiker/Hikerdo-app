@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+main {
+   @apply bg-slate-100 dark:bg-[#1d232a]
+}
+}
