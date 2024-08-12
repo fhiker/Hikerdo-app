@@ -77,7 +77,6 @@ const TaskManagement = () => {
         return [];
     }, [taskLists, tasks, taskListsStatus, tasksStatus]);
 
-    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     const handleRemove = (id: string) => {
         if (projectId)
             deleteTaskList.mutate({ tasklistId: id, projectId: projectId })
